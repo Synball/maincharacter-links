@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>You've been invited to Main Character</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; text-align: center; padding: 60px 20px; background: #111; color: white; }
+    h1 { font-size: 28px; font-weight: 900; }
+    p { color: #888; font-size: 16px; }
+    .code { font-size: 36px; font-weight: 900; letter-spacing: 8px; color: #E8873A; margin: 32px 0; }
+    .btn { display: inline-block; background: #E8873A; color: white; padding: 16px 40px; border-radius: 50px; font-size: 16px; font-weight: 700; text-decoration: none; margin-top: 16px; }
+  </style>
+  <script>
+    function getCode() {
+      const parts = window.location.pathname.split('/');
+      return parts[parts.length - 1] || parts[parts.length - 2];
+    }
+    window.onload = function() {
+      const code = getCode();
+      document.getElementById('code').textContent = code;
+      document.getElementById('applink').href = 'maincharacter://invite/' + code;
+      // Try to open app automatically
+      window.location = 'maincharacter://invite/' + code;
+    }
+  </script>
+</head>
+<body>
+  <h1>You're invited 🌟</h1>
+  <p>Someone wants you to join Main Character.</p>
+  <p>Your invite code:</p>
+  <div class="code" id="code"></div>
+  <a class="btn" id="applink" href="#">Open in Main Character</a>
+  <p style="margin-top: 32px; font-size: 13px; color: #555;">Don't have the app yet? Download it on the App Store.</p>
+</body>
+</html>
