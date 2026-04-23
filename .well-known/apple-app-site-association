@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "AVK8W475YA.Synco.Main-Character",
+        "paths": ["/invite/*"]
+      }
+    ]
+  }
+}
