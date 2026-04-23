@@ -20,7 +20,7 @@
       document.getElementById('code').textContent = code;
       document.getElementById('applink').href = 'maincharacter://invite/' + code;
       // Try to open app automatically
-      window.location = 'maincharacter://invite/' + code;
+      window.location = 'maincharacter://invite?code=' + code;
     }
   </script>
 </head>
