@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main Character Invite</title>
+  <script>
+    // Try to open the app, fall back to showing the code
+    const path = window.location.pathname;
+    const code = path.split('/').pop();
+    window.location = 'maincharacter://invite/' + code;
+  </script>
+</head>
+<body>
+  <p>Opening Main Character...</p>
+  <p>If the app doesn't open, enter invite code: <strong id="code"></strong></p>
+  <script>
+    const code = window.location.pathname.split('/').pop();
+    document.getElementById('code').textContent = code;
+  </script>
+</body>
+</html>
